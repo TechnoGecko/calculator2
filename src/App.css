@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
+
+* {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background: rgb(131, 58, 180);
+  background: -moz-linear-gradient(
+    146deg,
+    rgba(131, 58, 180, 0.6390756986388305) 0%,
+    rgba(253, 29, 29, 0.591456651019783) 45%,
+    rgba(235, 197, 156, 1) 63%,
+    rgba(131, 58, 180, 0.8967787798713235) 100%
+  );
+  background: -webkit-linear-gradient(
+    146deg,
+    rgba(131, 58, 180, 0.6390756986388305) 0%,
+    rgba(253, 29, 29, 0.591456651019783) 45%,
+    rgba(235, 197, 156, 1) 63%,
+    rgba(131, 58, 180, 0.8967787798713235) 100%
+  );
+  background: linear-gradient(
+    146deg,
+    rgba(131, 58, 180, 0.6390756986388305) 0%,
+    rgba(253, 29, 29, 0.591456651019783) 45%,
+    rgba(235, 197, 156, 1) 63%,
+    rgba(131, 58, 180, 0.8967787798713235) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#833ab4",GradientType=1);
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 256px;
+  text-align: center;
+  border: 10px solid #101116;
+  background: #101116;
+  border-radius: 5px;
+  border: solid rgb(235, 228, 228) 7px;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#screen {
+  border: 2px solid #333;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+}
+
+input[type="text"] {
+  height: 75px;
+  width: 249px;
+  background-color: #10111600;
+  border: 0px;
+  color: #ffffff;
+  text-align: right;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  caret-color: transparent;
+}
+#clear {
+  grid-column: 1/3;
+  grid-row: 1;
+  color: #262834;
+  color: #ffffff;
+}
+
+#equals {
+  grid-column: 3/5;
+  grid-row: 5;
+  color: #262834;
+  color: #ffffff;
+}
+
+#backspace {
+  color: 262834;
+}
+
+button {
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #262834;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+button:hover {
+  outline: 2px solid rgba(250, 246, 246, 0.788);
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+.highlight {
+  background: #be7cebd2;
 }
