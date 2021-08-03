@@ -51,6 +51,26 @@ body {
 
 #screen {
   border: 2px solid #333;
+  background: rgb(17, 17, 17);
+  background: -moz-linear-gradient(
+    107deg,
+    rgba(17, 17, 17, 1) 0%,
+    rgba(64, 63, 69, 1) 50%,
+    rgba(17, 17, 17, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    107deg,
+    rgba(17, 17, 17, 1) 0%,
+    rgba(64, 63, 69, 1) 50%,
+    rgba(17, 17, 17, 1) 100%
+  );
+  background: linear-gradient(
+    107deg,
+    rgba(17, 17, 17, 1) 0%,
+    rgba(64, 63, 69, 1) 50%,
+    rgba(17, 17, 17, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#111111",endColorstr="#111111",GradientType=1);
 }
 
 .keypad {
